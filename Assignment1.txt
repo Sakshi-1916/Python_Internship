@@ -1,0 +1,22 @@
+Q1. Python is high level programming language invented by Guido van Rossum in late 1991.
+It is a simple programming language  to learn , write and read.
+It is human readable 
+It is portable 
+It is platform independent 
+It has various applications in field of AI & ML, Data Science & Data Analysis.
+
+Q2. 
+a. Lists are collections of ordered elements stored in a sequential way as similar to tuple.
+b. Lists are  denoted using [ ] square brackets while tuples are denoted using ( ) round brackets in python.
+c. Tuples have a faster element retrival and are better than lists because tuple indices are static and doesn't change once they are stored in memory.
+d. Lists are mutable in nature where as tuples are immutable in nature.
+
+Q3. The in built data type in python include int (Integer) , float (Decimal), complex , str (String) , bool (Boolean), None, 
+byte, Set , List, Dictionary (dict), Tuple.
+
+Q4. List methods:
+append, update, extend, len, pop, reverse, delete, max, min, insert, etc.
+
+Q5.
+dictionary methods:
+get, update, clear, pop, key, value, etc.
