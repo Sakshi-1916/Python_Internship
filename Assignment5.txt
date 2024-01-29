@@ -1,0 +1,172 @@
+Q1.
+1. Dictionary is a collection of key, value pairs where as set is collection of unordered elements.
+2. Set is represented using { } as well as dictionary is represented using { }.
+3. Set and dictionary both are mutable.
+4. Set contains no duplicate values, while dictionary can have no duplicate keys.
+5. Set can be created using set() and dictionaries can be created using dict().
+
+Q2.
+List  comprehension is a simpler syntax to create list  doing computation on other existing list.
+example: l1 = [1,2,3,4,5,6,7,8,9,10]
+[print(i) for i in l1 if i%2 == 0]
+
+Q3. 
+lambda function are also called as anonymous function which can compute a single expression on one or more variable data.
+the 3 functions filter(), reduce() and reduce() all of them need lambda function mandatorily and a list or tuple for using them.
+1. fliter()
+ it is used to filter out the results.
+eg: l = [1,2,3,4,5,6,7,8,9]
+print(tuple(filter(lambda x: x%2==0, l)))
+2. map() 
+map with every value present in the list.
+eg: l = [20,30,40,45,56,76,43,65] 
+x = list(map(lambda x: x*2, l))
+print(x)
+3. reduce()
+redude it to one value.
+eg: import functools
+l = [2000,3000,50] 
+x = reduce(lambda x, y: x+y,  l)
+print(x) 
+
+Q4.
+The pass, continue and break are loop control statements in python .
+These statements are used to control the flow of a loop.
+1. Pass
+pass statement does nothing as the name suggests , it is generally used when its needed syntactically.
+Its used in empty loops or functions which will not generate any error if pass is used in them.
+eg:
+s = 'string'
+for i in s :
+     if i == 'i' :
+     print("pass executing...")
+     pass
+     print(i)
+2. Break 
+break statement terminates the loop when used . 
+eg:
+s = 'string'
+for i in s :
+     print(i)
+     if  i == 'i' :
+         print("for loop ends here")
+         break
+         print()
+3. continue 
+It forcefully executes the loop with skipping the element mentioned in condition inside the loop.
+eg:
+s = 'string'
+for i in s :
+     if i == 'i' :
+     continue
+     print(i)
+
+Q.5
+*args is used to pass variable no. of arguments into functions.
+ It is used when we don't know about how many arguments are to be passed into function.
+using *args we can pass any no. of arguments which are not keywords.
+Whereas, **args is used to pass variable no. of arguments which are key and value pair, 
+that is we can pass any no. of arguments in form of key value pair.
+ 
+Q.6
+Indentation are white spaces to recognize a block of code in python. 
+Indentation are part of general syntax for writing code in python.
+Whereas, indentation is used in other languages for purpose of increasing code readability 
+but in python it is important to use indentation while programming.
+
+Q.7
+range() function is used to print sequence of no.s in a given range.
+It is mostly used in iterable loops.
+It only takes integers as arguments. 
+No float or non integers are allowed.
+It can access items by index as in a list.
+syntax: range(start, stop, step)
+where start indicates the starting no. which is inclusive.
+stop indicates the no. where loop will stop executing which exclusive.
+and step indicates the increment or decrement.
+The start default is 0 and the default step is 1.
+eg:
+to print natural no.s from 1 to 10:
+for i in range(1, 11):
+       print(i, end=" ")
+in this above loop it will print the the no.s from 1 to 10, 11 is not included i.e, its always (stop-1) 
+by default the step in this will be set to 1.
+
+eg:
+to print table of 2:
+for i in range(2, 21, 2):
+       print(i)
+the above loop will print as follows:
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+here the start is 2, the stop is 21 but loop will execute till 21-1 that is 20, and the step is 2 which increment by 2.
+
+eg:
+to access elements in list :
+l = ['pen', 'paper', 'pencil', 'notebook']
+for i in range(len(l)):
+       print(l[i])
+in above loop range function takes in the value of len(l) length of list l which is 4 and iterates through the list,
+printing the element in list one by one.
+
+Q.8
+No , there is no tuple comprehension because when we comprehend its meant to be iterating in loop and then assigning a new container for storing the result. The tuple is iterative but when its comes to assigning part, it's pretty clear that tuple is immutable that means it can't be modified which makes it impossible to assign the result into new tuple. Hence, there are no tuple comprehensions.
+
+Q.9 
+to delete a file using python we need the OS library and the function remove(), 
+which will remove the file when used but if the file is not existing then python throws error.
+eg:
+import os
+if os.path.exists("file.txt"):
+  os.remove("file.txt")
+else:
+  print("file does not exist!")
+in above snippet we import the library OS and then use 2 functions of the library imported,
+the path.exists() checks if the file exists or not and the remove() deletes the file.
+If the file exists then it is removed/deleted, but if it doesn't exist then it print the message that the file doesn't exist.
+
+Q.10
+The slice() function in python works similar to range function in a loop but is differently written inside variable_name[start :stop :step]
+ or slice(start, stop, step).
+It also takes only integers as arguments. 
+the start is starting no./index  which is inclusive and its default is 0.
+stop is ending value/index which is exclusive.
+and step is increment/decrement value/index by default is 1.
+It retrieves the result based on indices same as range.
+It is used to slice or break in parts of the string, lists, tuples, etc.
+eg:
+to slice a string:
+str = 'hello world!'
+sobj = slice(0,5,1)
+print(str[sobj])
+print(str[0:5]) 
+the above will print as follows:
+hello
+as the function will start from 0th index of string str and will go until 5-1=4th index, slicing off the remaining string from str.
+
+eg:
+to slice a list:
+l = [10,20,55,40,2]
+sobj = slice(-1)
+print(l[sobj])
+print(l[:-1:])
+in above code the list is sliced from end at index -1 and the other parameters are taken by default.
+which will print the result:
+[10,20,55,40]
+
+eg:
+l = ['a', 'b', 'c', 'd', 'e', 'f']
+sobj = slice(-2, -6, -1)
+print(l[sobj])
+the above will print:
+['e', 'd', 'c', 'b']
+as the slicing will be started from -2 index till -6 index i.e, from backwards and it increments by -1 as a result printing the sliced list.
+  
